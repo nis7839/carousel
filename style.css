@@ -1,0 +1,77 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    /* background-color: #fff; */
+    /* animation: slideImage 20s linear infinite; */
+}
+
+.container {
+    padding: 2rem;
+}
+
+.slide {
+    position: relative;
+    max-width: 50rem;
+    /* max-height: 100vh; */
+    margin: 0 auto;
+}
+
+.slider {
+    display: flex;
+    aspect-ratio: 16/9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    border-radius: 0.5rem;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+.slider img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: contain;
+}
+
+.scroll {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 1;
+}
+
+.scroll a {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.5;
+    transition: opacity ease 250ms;
+}
+
+.scroll a:hover {
+    opacity: 2;
+}
+
+@keyframes slideImage {
+    0% {
+        background-image: url("./images/mahadev.jpg");
+    }
+    25% {
+        background-image: url("./images/shivaa.jpg");
+    }
+    50% {
+        background-image: url("./images/shiva.jpg");
+    }
+    75% {
+        background-image: url("./images/shiv.jpg");
+    }
+    100% {
+        background-image: url("./images/sh.jpg");
+    }
+}
